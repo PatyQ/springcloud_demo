@@ -1,0 +1,14 @@
+server:
+  port: 10010
+
+spring:
+  application:
+    name: spring-cloud-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10010/eureka
+    #当前的微服务是否可以调用其他微服务
+    fetch-registry: false
+    #当前微服务是否注册到其他eureka上,可以为true可为false
+    register-with-eureka: true
